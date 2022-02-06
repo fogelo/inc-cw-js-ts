@@ -23,3 +23,8 @@ export function divisibleBy(numbers: Array<number>, divisor: number) {
     return numbers.filter(item => item % divisor === 0)
 }
 
+/*?4 My head is at the wrong end!*/
+
+export function fixTheMeerkat(arr: Array<string>) {
+    return arr.reverse()
+}

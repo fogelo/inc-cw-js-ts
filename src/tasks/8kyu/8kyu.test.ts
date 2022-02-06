@@ -1,4 +1,4 @@
-import {divisibleBy, getVolumeOfCuboid, solution, sum} from './8kyu';
+import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum} from './8kyu';
 
 /*? test */
 test('sum should be correct', () => {
@@ -28,4 +28,13 @@ test('found numbers should be correct', () => {
     expect(divisibleBy([0, 1, 2, 3, 4, 5, 6], 4)).toStrictEqual([0, 4])
     expect(divisibleBy([0], 4)).toStrictEqual([0])
     expect(divisibleBy([1, 3, 5], 2)).toStrictEqual([])
+})
+
+/*?4 My head is at the wrong end!*/
+test('the order of item should be correct', ()=>{
+    expect(fixTheMeerkat(["tail", "body", "head"])).toStrictEqual( ["head", "body", "tail"]);
+    expect(fixTheMeerkat(["tails", "body", "heads"])).toStrictEqual( ["heads", "body", "tails"]);
+    expect(fixTheMeerkat(["bottom", "middle", "top"])).toStrictEqual( ["top", "middle", "bottom"]);
+    expect(fixTheMeerkat(["lower legs", "torso", "upper legs"])).toStrictEqual( ["upper legs", "torso", "lower legs"]);
+    expect(fixTheMeerkat(["ground", "rainbow", "sky"])).toStrictEqual( ["sky", "rainbow", "ground"]);
 })
