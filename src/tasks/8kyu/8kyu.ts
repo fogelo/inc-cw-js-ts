@@ -18,4 +18,8 @@ export function getVolumeOfCuboid(length: number, width: number, height: number)
 }
 
 
+/*?3 Find numbers which are divisible by given number*/
+export function divisibleBy(numbers: Array<number>, divisor: number) {
+    return numbers.filter(item => item % divisor === 0)
+}
 
