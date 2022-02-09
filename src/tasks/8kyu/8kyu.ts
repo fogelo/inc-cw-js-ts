@@ -28,3 +28,10 @@ export function divisibleBy(numbers: Array<number>, divisor: number) {
 export function fixTheMeerkat(arr: Array<string>) {
     return arr.reverse()
 }
+
+/*?5 Return the Nth Even Number*/
+
+export function nthEven(n: number) {
+    return 2*n-2
+}
+

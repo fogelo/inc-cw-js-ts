@@ -1,4 +1,4 @@
-import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum} from './8kyu';
+import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum,nthEven} from './8kyu';
 
 /*? test */
 test('sum should be correct', () => {
@@ -31,10 +31,20 @@ test('found numbers should be correct', () => {
 })
 
 /*?4 My head is at the wrong end!*/
-test('the order of item should be correct', ()=>{
-    expect(fixTheMeerkat(["tail", "body", "head"])).toStrictEqual( ["head", "body", "tail"]);
-    expect(fixTheMeerkat(["tails", "body", "heads"])).toStrictEqual( ["heads", "body", "tails"]);
-    expect(fixTheMeerkat(["bottom", "middle", "top"])).toStrictEqual( ["top", "middle", "bottom"]);
-    expect(fixTheMeerkat(["lower legs", "torso", "upper legs"])).toStrictEqual( ["upper legs", "torso", "lower legs"]);
-    expect(fixTheMeerkat(["ground", "rainbow", "sky"])).toStrictEqual( ["sky", "rainbow", "ground"]);
+test('the order of item should be correct', () => {
+    expect(fixTheMeerkat(['tail', 'body', 'head'])).toStrictEqual(['head', 'body', 'tail']);
+    expect(fixTheMeerkat(['tails', 'body', 'heads'])).toStrictEqual(['heads', 'body', 'tails']);
+    expect(fixTheMeerkat(['bottom', 'middle', 'top'])).toStrictEqual(['top', 'middle', 'bottom']);
+    expect(fixTheMeerkat(['lower legs', 'torso', 'upper legs'])).toStrictEqual(['upper legs', 'torso', 'lower legs']);
+    expect(fixTheMeerkat(['ground', 'rainbow', 'sky'])).toStrictEqual(['sky', 'rainbow', 'ground']);
+})
+
+/*?5 Return the Nth Even Number*/
+
+test('number should be even', () => {
+    expect(nthEven(1)).toBe(0)
+    expect(nthEven(2)).toBe(2)
+    expect(nthEven(3)).toBe(4)
+    expect(nthEven(100)).toBe(198)
+    expect(nthEven(1298734)).toBe(2597466)
 })
