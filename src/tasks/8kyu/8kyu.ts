@@ -32,6 +32,12 @@ export function fixTheMeerkat(arr: Array<string>) {
 /*?5 Return the Nth Even Number*/
 
 export function nthEven(n: number) {
-    return 2*n-2
+    return 2 * n - 2
 }
 
+/*?6 A Needle in the Haystack*/
+
+export function findNeedle(haystack: Array<any>) {
+    let position = haystack.indexOf('needle', 0)
+    return `found the needle at position ${position}`
+}

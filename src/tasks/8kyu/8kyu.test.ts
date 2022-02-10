@@ -1,4 +1,4 @@
-import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum,nthEven} from './8kyu';
+import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum, nthEven, findNeedle} from './8kyu';
 
 /*? test */
 test('sum should be correct', () => {
@@ -48,3 +48,10 @@ test('number should be even', () => {
     expect(nthEven(100)).toBe(198)
     expect(nthEven(1298734)).toBe(2597466)
 })
+
+/*?6 A Needle in the Haystack*/
+
+test('needle position should be correct', () => {
+    expect(findNeedle(['3', '123124234', undefined, 'needle', 'world'])).toBe('found the needle at position 3')
+})
+
