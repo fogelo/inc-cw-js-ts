@@ -1,4 +1,4 @@
-import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum, nthEven, findNeedle} from './8kyu';
+import {divisibleBy, fixTheMeerkat, getVolumeOfCuboid, solution, sum, nthEven, findNeedle, maps} from './8kyu';
 
 /*? test */
 test('sum should be correct', () => {
@@ -55,3 +55,9 @@ test('needle position should be correct', () => {
     expect(findNeedle(['3', '123124234', undefined, 'needle', 'world'])).toBe('found the needle at position 3')
 })
 
+/*?7 Beginner - Lost Without a Map*/
+test('new array should be correct', () => {
+    expect(maps([1, 2, 3])).toStrictEqual([2, 4, 6])
+    expect(maps([4, 1, 1, 1, 4])).toStrictEqual([2, 4, 6])
+    expect(maps([2, 2, 2, 2, 2, 2])).toStrictEqual([2, 4, 6])
+})

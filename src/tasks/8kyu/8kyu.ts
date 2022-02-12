@@ -41,3 +41,9 @@ export function findNeedle(haystack: Array<any>) {
     let position = haystack.indexOf('needle', 0)
     return `found the needle at position ${position}`
 }
+
+/*?7 Beginner - Lost Without a Map*/
+
+export function maps(x: Array<number>) {
+    return x.map(item=>item*2)
+}
